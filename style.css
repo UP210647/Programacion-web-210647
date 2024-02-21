@@ -1,0 +1,208 @@
+/*Tipos de selectores*/
+/*
+*{
+    background-color: red;
+}
+
+h1{
+    font-size: 10px;
+}
+
+#titulo{
+    font-size: 30px;
+}
+
+.colorTextRed{
+    color: red;
+}
+*/
+
+/*-------------------------------------  */
+
+/* Pseudo elementos*/
+
+:root{
+    --primary-color-grey: #6E7886;
+    --primary-color-grey-50: rgba(110,120,124,0.1);
+    --color-icon-comentario: rgba(29,161,242);
+    --color-icon-comentario-50: rgba(29,161,242,0.4);
+    --color-icon-reetwet: rgba(24,176,95);
+    --color-icon-reetwet-50: rgba(24,176,95, 0.4);
+    --color-icon-like: rgba(224,36,94);
+    --color-icon-like-50: rgb(224, 36, 94, 0.4);
+    --color-icon-compartir: rgba(30,148,221);
+    --color-icon-compartir-50: rgba(30,148,221, 0.4);
+}
+
+
+
+/*-------------------------------------  */
+*{
+    background-color: #15202b;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    box-sizing: border-box;
+}
+
+img, svg{
+    width: 75%;
+    max-width: 100%;
+    max-height: auto;
+}
+
+a {
+    color: rgb(29,161,242);
+    text-decoration: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+
+.textGrey{
+    color: #6E7886;
+}
+
+.container-twitt{
+    border-bottom: solid 1px var(--primary-color-grey);
+    width: 650px;
+    height: 410px;
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+.container-twitt *{
+    background-color: transparent;
+}
+
+.container-twitt:hover{
+    cursor: pointer;
+    transition: 0.6s;
+    background-color: var(--primary-color-grey-50);
+    border-radius: 10px;
+}
+
+.twitt-body{
+    grid-column: 1/13;
+    grid-row: 1/11;
+
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    grid-template-rows: 1fr;
+}
+
+.twitt-body p{
+    padding: 10px 0px;
+}
+
+.twitt-content img{
+    border-radius: 30px;
+    border-style:solid;
+    border-width: 1px;
+    border-color: var(--primary-color-grey);
+    width: 94%;
+}
+
+.twitt-icons{
+    grid-column: 1/13;
+    grid-row: 12/13;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.twitt-icons .icon:nth-child(1):hover svg{
+    border-radius: 50%;
+    background-color: var(--color-icon-comentario-50);
+    cursor:alias;
+    fill: var(--color-icon-comentario);
+    transition-duration: 0.5s;
+}
+
+.twitt-icons .icon:nth-child(1):hover span{
+    transition-duration: 0.5s;
+    color: var(--color-icon-comentario);
+}
+
+.twitt-icons .icon:nth-child(2):hover svg{
+    border-radius: 50%;
+    background-color: var(--color-icon-reetwet-50);
+    cursor:alias;
+    fill: var(--color-icon-reetwet);
+    transition-duration: 0.5s;
+}
+
+.twitt-icons .icon:nth-child(2):hover span{
+    transition-duration: 0.5s;
+    color: var(--color-icon-reetwet);
+}
+
+.twitt-icons .icon:nth-child(3):hover svg {
+    border-radius: 50%;
+    background-color: var(--color-icon-like-50);
+    cursor:alias;
+    fill: var(--color-icon-like);
+    transition-duration: 0.5s;
+}
+
+.twitt-icons .icon:nth-child(3):hover span{
+    transition-duration: 0.5s;
+    color: var(--color-icon-like);
+}
+
+.twitt-icons .icon:nth-child(4):hover svg {
+    border-radius: 50%;
+    background-color: var(--color-icon-compartir-50);
+    cursor:alias;
+    fill: var(--color-icon-compartir);
+    transition-duration: 0.5s;
+}
+
+.twitt-icons .icon:nth-child(4):hover span{
+    transition-duration: 0.5s;
+    color: var(--color-icon-compartir);
+}
+
+.twitt-avatar > img{
+    border-radius: 50%;
+    margin: 10px;
+}
+
+
+.icon{
+    width:60px;
+    display:flex;
+    justify-content:center ;
+    align-items: center;
+   
+}
+
+.icon svg{
+    width: 50%;
+    margin: auto 5px auto auto;
+    fill: var(--primary-color-grey);
+    padding: 5px;
+}
+
+.icon span{
+    font-size: small;
+    color: var(--primary-color-grey);
+}
+
+/* ------------ PSEUDOCLASES ---------------- 
+Serie de acontecimientos que actuan cuando hacemos una acción
+*/
+
+
+
+
